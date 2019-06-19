@@ -1,4 +1,4 @@
-var port  = process.env.port
+var keeper_api_port  = process.env.keeper_api_port
 var es_host = process.env.es_host
 var es_port = process.env.es_port
 var es_index = process.env.es_index
@@ -18,7 +18,7 @@ app.post('/keep_this_data', function (req, res) {
 })
 
 function postToEs(json) {
-  url = "http://" + es_host + ":" + es_port + "/" + es_index + "/" + es_type
+  url = `http://${es_host}:${es_port}/${es_index}/${es_type}`
   return rp({
         uri: url,
         headers: {
@@ -30,4 +30,4 @@ function postToEs(json) {
     })
 }
 
-app.listen(port, () => console.log(`listening on port ${port}!`))
+app.listen(keeper_api_port, () => console.log(`listening on port ${keeper_api_port}!`))
