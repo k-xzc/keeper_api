@@ -18,7 +18,7 @@ app.post('/keep_this_data', function (req, res) {
 })
 
 function postToEs(json) {
-  url = es_host + ":" + es_port + "/" + es_index + "/" + es_type
+  url = "http://" + es_host + ":" + es_port + "/" + es_index + "/" + es_type
   return rp({
         uri: url,
         headers: {
