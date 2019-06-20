@@ -19,25 +19,19 @@ I break the monolith service into 3 micro services
 
 # How to run 
   
-  Checkout code from GitHub
-  
-  export keeper_api_port=.....
-  
-  export es_host=.....
-  
-  export es_port=.....
-  
-  export es_index=.....
-  
-  export es_type=.....
-
-  npm install
-  
+  git clone https://github.com/kantsuw/keeper_api/ </br>
+  cd keeper_api </br>
+  export keeper_api_port=..... </br>
+  export es_host=..... </br>
+  export es_port=..... </br>
+  export es_index=..... </br>
+  export es_type=..... </br>
+  npm install </br>
   node app.js/index.js
 
 # Running with docker 
 
-docker run -d -e keeper_api_port=5678 -e es_host=kantz.space \
-
--e es_host=9200 -e es_index=bx_x_x -e es_type=currency xezor/keeper_api
+docker run -d -e keeper_api_port=5678 -e es_host=kantz.space \ </br>
+-e es_host=9200 -e es_index=bx_x_x -e es_type=currency \  </br>
+xezor/keeper_api
 
