@@ -37,7 +37,7 @@ I break the monolith service into 3 micro services
 
 # Running with docker 
 
-docker run -d -e keeper_port=5678 -e es_host=kantz.space \
+docker run -d -e keeper_api_port=5678 -e es_host=kantz.space \
 
 -e es_host=9200 -e es_index=bx_x_x -e es_type=currency xezor/keeper_api
 
